@@ -1,6 +1,6 @@
 {
   "name": "web-storage-extend",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "author": "black jack",
   "main": "dist/index.mjs",

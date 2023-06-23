@@ -4,12 +4,12 @@ import { globalConfig } from './types';
 class LocalCache {
   private config: globalConfig = {
     type: 'localStorage', //存储类型，localStorage | sessionStorage
-    prefix: 'tmd-ui_0.0.1', //版本号
+    prefix: 'tmd-ui_0.0.1', //前缀
     expire: 24 * 60, //过期时间，默认为一天，单位为分钟
     isEncrypt: true, //支持加密、解密数据处理
   };
 
-  constructor(config: globalConfig) {
+  constructor(config?: globalConfig) {
     this.config = { ...this.config, ...config };
   }
 

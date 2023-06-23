@@ -17,6 +17,7 @@ const localCache = new LocalCache()
 // 有效期单位为秒
 localCache.setCache('name', 'cake', 1)
 localCache.getCache('name')
+localCache.deleteCache('name')
 ```
 
 #### 进阶使用

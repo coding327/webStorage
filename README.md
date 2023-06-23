@@ -23,9 +23,9 @@ localCache.getCache('name')
 
 ```js
 const localCache = new LocalCache({
-	type: 'localStorage',
-	prefix: 'cake',
-	isEncrypt: true
+  type: 'localStorage',
+  prefix: 'cake',
+  isEncrypt: true
 })
 ```
 

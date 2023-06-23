@@ -18,6 +18,7 @@ const localCache = new LocalCache()
 localCache.setCache('name', 'cake', 1)
 localCache.getCache('name')
 localCache.deleteCache('name')
+localCache.clearCache()
 ```
 
 #### 进阶使用

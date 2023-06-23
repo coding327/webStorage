@@ -21,9 +21,20 @@ localCache.getCache('name')
 
 #### 进阶使用
 
-| type | localStorage \| sessionStorage |
-| ---- | ------------------------------ |
-|      |                                |
-|      |                                |
-|      |                                |
+```js
+const localCache = new LocalCache({
+	type: 'localStorage',
+	prefix: 'cake',
+	isEncrypt: true
+})
+```
+
+
+
+| 字段      | 解释       | 必传 | 类型    | value                          | 默认值       |
+| --------- | ---------- | ---- | ------- | ------------------------------ | ------------ |
+| type      | 存储类型   | 是   | string  | localStorage \| sessionStorage | localStorage |
+| prefix    | 前缀       | 是   | string  | -                              | -            |
+| expire    | 有效时间   | 否   | number  | -                              | 24 * 60 * 60 |
+| isEncrypt | 加密、解密 | 是   | boolean | -                              | true         |
 

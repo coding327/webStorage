@@ -1,7 +1,7 @@
 interface globalConfig {
   type: 'localStorage' | 'sessionStorage';
   prefix: string;
-  expire: number;
+  expire?: number;
   isEncrypt: boolean;
 }
 

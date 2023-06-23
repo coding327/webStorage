@@ -26,17 +26,19 @@ class LocalCache {
   };
 
   // 设置缓存
+  // 有效期，默认为一天，单位为秒
   public setCache(
     key: string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     value: any,
-    expire: number = 24 * 60 * 60,
+    expire: number,
   ): boolean {
     //设定值
     if (value === '' || value === null || value === undefined) {
       //空值重置
       value = null;
     }
+    expire = expire || this.config.expire || 24 * 60 * 60; //过期时间
     if (isNaN(expire) || expire < 0) {
       //过期时间值合理性判断
       throw new Error('Expire must be a number');

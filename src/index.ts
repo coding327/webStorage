@@ -5,7 +5,7 @@ class LocalCache {
   private config: globalConfig = {
     type: 'localStorage', //存储类型，localStorage | sessionStorage
     prefix: 'tmd-ui_0.0.1', //前缀
-    expire: 24 * 60, //过期时间，默认为一天，单位为分钟
+    expire: 24 * 60 * 60, //过期时间，默认为一天，单位为秒
     isEncrypt: true, //支持加密、解密数据处理
   };
 
@@ -30,7 +30,7 @@ class LocalCache {
     key: string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     value: any,
-    expire: number = 24 * 60,
+    expire: number = 24 * 60 * 60,
   ): boolean {
     //设定值
     if (value === '' || value === null || value === undefined) {
@@ -44,7 +44,7 @@ class LocalCache {
     const data = {
       value, //存储值
       time: Date.now(), //存储日期
-      expire: Date.now() + 1000 * 60 * expire, //过期时间
+      expire: Date.now() + 1000 * expire, //过期时间
     };
     //是否需要加密，判断装载加密数据或原数据
     window[this.config.type].setItem(
